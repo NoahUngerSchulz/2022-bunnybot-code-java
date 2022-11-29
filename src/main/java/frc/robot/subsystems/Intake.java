@@ -15,6 +15,9 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 
 public class IntakeSubSystem extends SubsystemBase {
+    
+    private boolean
+            pivotPos = false;
 
     private final Solenoid pivot =
         new Solenoid(Ports.PCM_1, PneumaticsModuleType.REVPH, Ports.PIVOT_CLIMB_SOLENOID);
