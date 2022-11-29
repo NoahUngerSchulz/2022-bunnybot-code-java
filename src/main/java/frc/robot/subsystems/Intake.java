@@ -23,7 +23,8 @@ public class IntakeSubSystem extends SubsystemBase {
         new Solenoid(Ports.PCM_1, PneumaticsModuleType.REVPH, Ports.PIVOT_CLIMB_SOLENOID);
 
     public IntakeSubSystem(){
-    pivot.set(false);
+        pivotPos = false;
+        pivot.set(false);
     }
    
     public void setPivotPos(boolean pos) {
