@@ -28,5 +28,8 @@ public class IntakeSubSystem extends SubsystemBase {
     public boolean getPivotPos() {
         return pivotPos;
     }
+    public void togglePivotPos() {
+        setPivotPos(!pivotPos);
+    }
 }
 
