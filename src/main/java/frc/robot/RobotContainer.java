@@ -94,7 +94,7 @@ new JoystickButton(m_XboxController, Button.kB.value)
 .whenHeld(new RunCommand(m_ShooterSubSystem::intake, m_ShooterSubSystem));
 
 new JoystickButton(m_XboxController, Button.kX.value)
-.whenHeld(new RunCommand(m_ShooterSubSystem::IntakeReversed, m_ShooterSubSystem));
+.whenPressed(new InstantCommand(() -> Intake.togglePivotPos()));
 
 new JoystickButton(m_XboxController, Button.kStart.value)
 .whenHeld(new RunCommand(m_ShooterSubSystem::Unjam, m_ShooterSubSystem));
@@ -105,9 +105,7 @@ double forwards = m_leftJoystick.getY();
 double rotationSpeed = m_Lemonlight.getHorizontalOffset();
 new JoystickButton(m_XboxController, Button.kY.value)
 .whenHeld(new RunCommand(() ->m_Drive.arcadeDrive(forwards, rotationSpeed), m_Drive));
-
-
-
+  
 
 
 
