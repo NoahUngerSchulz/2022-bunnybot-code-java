@@ -42,6 +42,7 @@ public class RobotContainer {
   private final DriveSubSystem m_Drive = new DriveSubSystem();
   private final ShooterSubSystem m_ShooterSubSystem = new ShooterSubSystem();
   private final Lemonlight m_Lemonlight = new Lemonlight("photonvison");
+  private final Intake m_IntakeSubSystem = new Intake();
 
   // init controllers here
   private final Joystick m_leftJoystick = new Joystick(1);
